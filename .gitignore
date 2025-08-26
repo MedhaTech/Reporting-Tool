@@ -8,6 +8,7 @@ venv/
 aws/
 *.pem
 awscliv2.zip/
+awscliv2.zip
 .aws/
 .bash_history
 .cache
