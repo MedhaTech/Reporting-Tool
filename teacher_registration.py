@@ -11,7 +11,7 @@ def teacher_registration_dashboard():
     st.set_page_config(page_title="Teacher Registration Dashboard", layout="wide")
 
     # ---------- LOAD DATA ----------
-    df = pd.read_csv("Teacher_Registration_Cleaned (1).csv")
+    df = pd.read_csv("D:\\tst\\data files\\Teacher_Registration_Cleaned (1).csv")
     df.columns = df.columns.str.strip().str.title()
     df['State'] = df['State'].str.title().str.strip()
     df['District'] = df['District'].str.title().str.strip()
@@ -161,7 +161,7 @@ def teacher_registration_dashboard():
 
     # ---------- GEO HEATMAP ----------
     st.subheader("🗺️ India Geo Heatmap – Teacher Participation")
-    with open("india_states.geojson", "r", encoding="utf-8") as f:
+    with open("D:\\tst\\data files\\india_states.geojson", "r", encoding="utf-8") as f:
         india_geo = json.load(f)
     for feature in india_geo['features']:
         feature['properties']['ST_NM'] = feature['properties']['ST_NM'].strip().title()

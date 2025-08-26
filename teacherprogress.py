@@ -11,7 +11,7 @@ def teacher_progress_dashboard():
 
     @st.cache_data(show_spinner=False)
     def load_data():
-        df = pd.read_excel("cleaned_teacher_progress.xlsx")
+        df = pd.read_excel("D:\\tst\\data files\\cleaned_teacher_progress.xlsx")
         df['Teacher Gender'] = df['Teacher Gender'].astype(str).str.strip().str.replace(r'\s+', ' ', regex=True).str.title()
         df['School Type/Category'] = df['School Type/Category'].astype(str).str.strip().str.upper()
         return df

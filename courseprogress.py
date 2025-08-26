@@ -8,7 +8,7 @@ st.set_page_config(page_title="Student Course Progress Dashboard", layout="wide"
 st.markdown("<h1 style='text-align: center;'>🧑‍🏫 Student Course Progress Dashboard</h1>", unsafe_allow_html=True)
 def  courseprogress_dashboard():
 # Load and preprocess data
-    df = pd.read_csv("courseprogress1.xls", parse_dates=["created_at", "updated_at"], dayfirst=True)
+    df = pd.read_csv("D:\\tst\\data files\\courseprogress1.xls", parse_dates=["created_at", "updated_at"], dayfirst=True)
     df['created_at'] = pd.to_datetime(df['created_at'], errors='coerce')
     df['updated_at'] = pd.to_datetime(df['updated_at'], errors='coerce')
     df = df.dropna(subset=['created_at'])

@@ -1,0 +1,9 @@
+*.pem
+*.csv
+*.xls
+*.xlsx
+*.log
+__pycache__/
+venv/
+aws/
+*.pem

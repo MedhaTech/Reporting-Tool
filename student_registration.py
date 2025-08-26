@@ -13,7 +13,7 @@ def school_registration_dashboard():
     
 
     # ------------------ LOAD DATA ------------------
-    df = pd.read_csv("cleaned_school_data.csv")
+    df = pd.read_csv("D:\\tst\\data files\\cleaned_school_data.csv")
     df['State'] = df['State'].str.strip().str.title()
     df['City'] = df['City'].str.strip().str.title()
     df['School Name'] = df['School Name'].str.strip().str.title()
@@ -51,18 +51,19 @@ def school_registration_dashboard():
     st.subheader("🏫 Top Schools")
     school_counts = df.groupby("School Name")["No of teachers registered"].sum().sort_values(ascending=False)
     top_schools = school_counts.head(5).reset_index()
-    
+    #bottom_schools = school_counts.tail(5).reset_index()
 
     col4 = st.columns(1)[0]
     fig_top = px.bar(top_schools, x='School Name', y='No of teachers registered', color='No of teachers registered',
                         color_continuous_scale='greens', title="Top 5 Schools")
-    
+    #fig_bottom = px.bar(bottom_schools, x='School Name', y='No of teachers registered', color='No of teachers registered',
+                        #color_continuous_scale='reds', title="Bottom 5 Schools")
     col4.plotly_chart(fig_top, use_container_width=True)
-    
+    #col5.plotly_chart(fig_bottom, use_container_width=True)
 
     # ------------------ GEO MAP ------------------
     st.subheader("🗺️ India Geo Heatmap – Teacher Participation by State")
-    with open("india_states.geojson", "r", encoding="utf-8") as f:
+    with open("D:\\tst\\data files\\india_states.geojson", "r", encoding="utf-8") as f:
         india_geo = json.load(f)
     for feature in india_geo['features']:
         feature['properties']['ST_NM'] = feature['properties']['ST_NM'].strip().title()
