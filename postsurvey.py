@@ -9,7 +9,7 @@ st.title("📊 Post-Survey Dashboard")
 @st.cache_data(show_spinner=False)
 def postsurvey_dashboard():
     def load_data():
-        return pd.read_excel("D:\\tst\\data files\\cleaned_post_survey.xlsx")
+        return pd.read_excel("cleaned_post_survey.xlsx")
 
     df = load_data()
 

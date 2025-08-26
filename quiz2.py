@@ -6,7 +6,7 @@ st.set_page_config(page_title="Quiz 2 Dashboard", layout="wide")
 
 @st.cache_data(show_spinner=False)
 def load_data():
-    return pd.read_csv("D:\\tst\\data files\\prcss_quiz2.csv")  # 🔁 Replace with your CSV file
+    return pd.read_csv("prcss_quiz2.csv")  # 🔁 Replace with your CSV file
 def quiz2dashboard():
     st.title(" 📊 Quiz-2 Dashboard")
     df = load_data()

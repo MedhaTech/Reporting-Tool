@@ -6,7 +6,7 @@ st.set_page_config(page_title="📊 Quiz 1 Insights Dashboard", layout="wide")
 
 @st.cache_data(show_spinner=False)
 def load_data():
-    return pd.read_csv("D:\\tst\\data files\\quiz1dataprocessed.csv")
+    return pd.read_csv("quiz1dataprocessed.csv")
 def quiz1_dashboard():
     df = load_data()
 

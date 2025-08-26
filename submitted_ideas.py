@@ -10,7 +10,7 @@ def submitted_ideas_dashboard():
     st.markdown("Visual breakdown of ideas submitted across Indian states by themes.")
 
     # === Load Data ===
-    df = pd.read_csv("D:\\tst\\data files\\Submitted_Ideas.csv", encoding='ISO-8859-1', low_memory=False,
+    df = pd.read_csv("Submitted_Ideas.csv", encoding='ISO-8859-1', low_memory=False,
                     dtype={'UDISE CODE': str, 'Pin code': str})
     df = df.dropna(subset=['State', 'Theme'])
 

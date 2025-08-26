@@ -38,7 +38,7 @@ def student_progress_dashboard():
         """Load and preprocess data with optimized operations"""
         try:
             #with st.spinner("loading"):
-            df = pd.read_csv("D:\\tst\\data files\\StudentProgressDetailedReport_3_7_2025 10_10_32.csv")
+            df = pd.read_csv("StudentProgressDetailedReport_3_7_2025 10_10_32.csv")
             
             # Optimize data processing
             df.columns = df.columns.str.strip()

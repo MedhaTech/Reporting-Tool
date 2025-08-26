@@ -4,7 +4,7 @@ import plotly.express as px
 
 @st.cache_data(show_spinner=False)
 def quiz5dashboard():
-    df = pd.read_csv('D:\\tst\\data files\\quiz5.csv')
+    df = pd.read_csv('quiz5.csv')
 
     st.title("Quiz 5 Dashboard")
 

@@ -9,7 +9,7 @@ st.title("📊 Pre-Survey Dashboard")
 def presurvey_dashboard():
     st.title("📊 Pre-Survey Dashboard")
     def load_data():
-        df = pd.read_excel("D:\\tst\\data files\\cleaned_pre_survey.xlsx")
+        df = pd.read_excel("cleaned_pre_survey.xlsx")
         return df
 
     df = load_data()
